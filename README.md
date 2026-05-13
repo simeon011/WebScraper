@@ -70,7 +70,23 @@ Chrome must be installed on your system. `webdriver-manager` handles the ChromeD
 python main.py
 ```
 
+The program runs as an interactive loop — after each action it returns to the main menu until you choose to exit.
+
 **Always run option 1 (Scrape) first** to populate `countries_data.csv` before using any analysis options. Scraping takes approximately 15–30 seconds.
+
+### Menu Options
+
+| Option | Description |
+|--------|-------------|
+| `1` | **Scrape** — launches the browser in headless mode, fetches population and GDP data, and saves it to `countries_data.csv` |
+| `2` | **Top 5 by population** — displays the 5 most populous countries with their population |
+| `3` | **Top 5 by GDP** — displays the 5 countries with the highest GDP |
+| `4` | **Continent analysis** — shows total population and average GDP per region |
+| `5` | **Search country** — enter a country name to get its population, region and GDP |
+| `6` | **Filter by population** — enter a min and max value to list all countries within that range (shows first 10 results) |
+| `0` | **Exit** |
+
+> Options 2–6 require `countries_data.csv` to exist. If the file is missing, the program will prompt you to run option 1 first.
 
 ## Data Sources
 
